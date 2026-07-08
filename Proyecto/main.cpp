@@ -8,7 +8,7 @@ int main()
 {
     int opcion;
 
-    do
+    do // Menu
 {
     cout << "\n===== Bienvenido al sistema de cafeteria =====";
     cout << "\n1. Ver menu";
@@ -23,7 +23,7 @@ int main()
     MsjErr();
 
     switch (opcion)
-    {
+    {        //ver menu
         case 1:
         {
             cout << "\n===== MENU =====\n";
@@ -38,7 +38,7 @@ int main()
             }
             break;
         }
-
+        //Agregar al pedido
         case 2:
         {
             int p, c;
@@ -80,7 +80,7 @@ int main()
 
             break;
         }
-
+          //ver pedido
         case 3:
         {
             cout << "\n===== PEDIDO =====\n";
@@ -101,8 +101,8 @@ int main()
             cout << "TOTAL: $" << calcularTotal() << endl;
             break;
         }
-
-        case 4:
+          //Modifica pedido
+        case 4: 
         {
             int p;
             bool valido = false;
@@ -153,8 +153,8 @@ int main()
             }
 
             break;
-        }
-        
+        }    
+          //confirmar compra
         case 5:
         {
             bool hayProductos = false;
@@ -248,7 +248,7 @@ int main()
             }
             break;
         }
-        
+         // Cancelar compra
         case 6:
         {
             bool hayPedidos = false;
@@ -307,7 +307,7 @@ int main()
 
             break;
         }
-
+         //salir
         case 7:
         {
             int confirmar;
