@@ -1,0 +1,5 @@
+******** FACTURA ********
+
+UCA-Cola x 3 = $3
+
+TOTAL: $2.7
