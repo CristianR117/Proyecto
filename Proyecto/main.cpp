@@ -43,22 +43,45 @@ int main()
         {
             int p, c;
 
+            bool hayStock = false;
+
+            for (int i = 0; i < N; i++)
+            {
+                if (stock[i] > 0)
+                {
+                    hayStock = true;
+                    break;
+                }
+            }
+
+            if (!hayStock)
+            {
+                cout << "No hay stock disponible de ningun producto.\n";
+                break;
+            }
+
             cout << "\n===== MENU =====\n";
 
             for (int i = 0; i < N; i++)
             {
                 cout << i + 1 << ". "
-                     << productos[i]
-                     << " $" << precios[i]
-                     << " Stock: " << stock[i]
-                     << endl;
+                    << productos[i]
+                    << " $" << precios[i]
+                    << " Stock: " << stock[i]
+                    << endl;
             }
-
+            
             bool valido = false;
             do {
                 cout << "\nProducto: ";
                 cin >> p;
                 MsjErr();
+
+                if (p >= 1 && p <= N && stock[p - 1] == 0)
+                {
+                    cout << "No hay stock de ese producto.\n";
+                    break;
+                }
 
                 cout << "Cantidad: ";
                 cin >> c;
@@ -76,11 +99,12 @@ int main()
                 {
                     cout << "Datos incorrectos.\n";
                 }
+
             } while (!valido);
 
             break;
         }
-          //ver pedido
+        //ver pedido
         case 3:
         {
             cout << "\n===== PEDIDO =====\n";
