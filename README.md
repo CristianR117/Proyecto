@@ -6,3 +6,5 @@ vista de los productos de un pedido, modificar el pedido y cancelar el pedido.
 
 Tambien posee un historial del ultimo pedido realizado donde se ocupa el manejo de archivos
 para guardalo como una factura simple y facil de entender.
+
+Funciona con c++ y se ejecuta en una terminal.
