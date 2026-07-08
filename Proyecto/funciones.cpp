@@ -61,7 +61,7 @@ float calcularTotal()
     return total;
 }
 
-
+//Mensaje de error
 void MsjErr()
 {
     if (cin.fail())
